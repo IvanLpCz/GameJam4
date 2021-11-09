@@ -25,7 +25,6 @@ namespace player
         {
             if (Input.GetKeyDown(KeyCode.Space) && canDash)
             {
-
                 StartCoroutine(Dash());
             }
         }
