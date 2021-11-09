@@ -2,15 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Scripteable_Player;
 
 namespace player
 {
     public class playerMovement : MonoBehaviour
     {
         private Rigidbody rb;
-        public float speed = 5f;
-        public float dashSpeed = 5f;
-        public float dashDuration = 0.25f;
+        [SerializeField] DashScipteable dashScripteable;
+        [SerializeField] movespeedScripteable MovespeedScripteable;
         private Vector3 forward, right;
         public bool canDash = true;
         private void Start()
@@ -35,8 +35,8 @@ namespace player
         }
         private void move()
         {           
-            Vector3 rightMovement = right * speed * Input.GetAxis("Horizontal");
-            Vector3 upMovement = forward * speed * Input.GetAxis("Vertical");
+            Vector3 rightMovement = right * MovespeedScripteable.speed * Input.GetAxis("Horizontal");
+            Vector3 upMovement = forward * MovespeedScripteable.speed * Input.GetAxis("Vertical");
             
             Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
@@ -48,10 +48,10 @@ namespace player
         }
         IEnumerator Dash()
         {
-            rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
+            rb.AddForce(transform.forward * dashScripteable.dashSpeed, ForceMode.Impulse);
             canDash = false;
 
-            yield return new WaitForSeconds(dashDuration);
+            yield return new WaitForSeconds(dashScripteable.dashDuration);
 
             rb.velocity = Vector3.zero;
             canDash = true;

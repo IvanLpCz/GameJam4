@@ -350,11 +350,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: -20
+  far clip plane: 100
   field of view: 60
   orthographic: 1
-  orthographic size: 6.51
+  orthographic size: 12.068258
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -377,13 +377,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566082857}
-  m_LocalRotation: {x: -0.37958512, y: -0.31178743, z: 0.13406228, w: -0.8606574}
-  m_LocalPosition: {x: -7.526801, y: 7.394513, z: -12.336886}
+  m_LocalRotation: {x: -0.27786615, y: -0.32516032, z: 0.097235866, w: -0.8986692}
+  m_LocalPosition: {x: -11.2, y: 6.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 34.24, y: 39.909, z: 0.411}
 --- !u!114 &566082861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,9 +560,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e246c2a69c6734685211ed7f1a1348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashScripteable: {fileID: 11400000, guid: 70d7953accb94de4ab6b718802d26241, type: 2}
+  MovespeedScripteable: {fileID: 11400000, guid: e5105126a22a869429332dad42999a4f, type: 2}
   speed: 0.1
-  dashSpeed: 50
-  dashDuration: 0.25
   canDash: 1
 --- !u!136 &1280413840
 CapsuleCollider:
