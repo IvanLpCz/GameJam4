@@ -23,15 +23,15 @@ namespace player
         }
         private void Update()
         {
-        }
-        private void FixedUpdate()
-        {
-            move();
             if (Input.GetKeyDown(KeyCode.Space) && canDash)
             {
 
                 StartCoroutine(Dash());
             }
+        }
+        private void FixedUpdate()
+        {
+            move();
         }
         private void move()
         {           
