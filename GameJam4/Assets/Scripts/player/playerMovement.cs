@@ -9,7 +9,10 @@ namespace player
     {
         private Rigidbody rb;
         public float speed = 5f;
+        public float dashSpeed = 5f;
+        public float dashDuration = 0.25f;
         private Vector3 forward, right;
+        public bool canDash = true;
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
@@ -21,8 +24,12 @@ namespace player
         private void Update()
         {
             move();
-        }
+            if (Input.GetKeyDown(KeyCode.Space) && canDash)
+            {
 
+                StartCoroutine(Dash());
+            }
+        }
         private void move()
         {           
             Vector3 rightMovement = right * speed * Time.deltaTime * Input.GetAxis("Horizontal");
@@ -36,5 +43,16 @@ namespace player
             transform.position += rightMovement;
             transform.position += upMovement;
         }
+        IEnumerator Dash()
+        {
+            rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
+            canDash = false;
+
+            yield return new WaitForSeconds(dashDuration);
+
+            rb.velocity = Vector3.zero;
+            canDash = true;
+        }
+
     }
 }
