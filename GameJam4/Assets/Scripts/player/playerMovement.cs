@@ -23,6 +23,9 @@ namespace player
         }
         private void Update()
         {
+        }
+        private void FixedUpdate()
+        {
             move();
             if (Input.GetKeyDown(KeyCode.Space) && canDash)
             {
@@ -32,12 +35,12 @@ namespace player
         }
         private void move()
         {           
-            Vector3 rightMovement = right * speed * Time.deltaTime * Input.GetAxis("Horizontal");
-            Vector3 upMovement = forward * speed * Time.deltaTime * Input.GetAxis("Vertical");
-
+            Vector3 rightMovement = right * speed * Input.GetAxis("Horizontal");
+            Vector3 upMovement = forward * speed * Input.GetAxis("Vertical");
+            
             Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
-            //rb.velocity = new Vector3(upMovement.x, rb.velocity.y, rightMovement.z); 
+            rb.velocity = new Vector3(heading.x, rb.velocity.y, heading.z); 
 
             transform.forward = heading;
             transform.position += rightMovement;
