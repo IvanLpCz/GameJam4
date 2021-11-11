@@ -7,23 +7,23 @@ namespace bullets
 {
     public class bullet : MonoBehaviour
     {
-        Rigidbody2D rb;
-        public Transform firePoint;
-        public GameObject bulletPrefab;
-
+        Rigidbody rb;
         public float bulletForce = 20f;
+        public Transform look;
+
+        private void Start()
+        {
+            look = GameObject.Find("lookat").GetComponent<Transform>();
+
+        }
 
         private void FixedUpdate()
         {
-            rb = GetComponent<Rigidbody2D>();
-            shoot();
+            rb = GetComponent<Rigidbody>();
+            rb.velocity = look.forward * bulletForce;
         }
 
-        private void shoot()
-        {
-            rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-        }
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerEnter(Collider collision)
         {
             gameObject.SetActive(false);
         }

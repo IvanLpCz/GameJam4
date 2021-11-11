@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 1280413840}
   - component: {fileID: 1280413838}
   - component: {fileID: 1280413839}
+  - component: {fileID: 1280413844}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -641,6 +642,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1280413844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280413837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9e13c8c002b6242bc3118b843e1a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPosition: {fileID: 184284819}
 --- !u!1 &1470874515
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,13 +665,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1470874517}
   - component: {fileID: 1470874516}
+  - component: {fileID: 1470874518}
+  - component: {fileID: 1470874519}
   m_Layer: 0
   m_Name: poolManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1470874516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,7 +681,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470874515}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffc1acd4cbbf5e34e8d32f856ba4f6cf, type: 3}
   m_Name: 
@@ -688,6 +704,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1470874518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470874515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e360b7af071d54686b2177e9130714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountToPool: 20
+  bulletPrefab: {fileID: 2894207784885532248, guid: ea4ede1ff1260f74c96a11a49d733774, type: 3}
+--- !u!114 &1470874519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470874515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d053c502d58bbd041bda31df5ed49553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletForce: 20
 --- !u!1 &2013728930
 GameObject:
   m_ObjectHideFlags: 0
