@@ -16,11 +16,11 @@ namespace bullets
             look = GameObject.Find("lookat").GetComponent<Transform>();
 
         }
-
         private void FixedUpdate()
         {
             rb = GetComponent<Rigidbody>();
             rb.velocity = look.forward * bulletForce;
+            
         }
 
         private void OnTriggerEnter(Collider collision)
