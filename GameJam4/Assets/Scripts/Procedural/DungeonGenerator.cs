@@ -54,7 +54,7 @@ namespace Procedural
                 }
                 ConnectTiles();
                 CollisionCheck();
-                //if(attempts >= maxAttempts) { break; }
+                if(attempts >= maxAttempts) { break; }
             }
             foreach(Conector conector in container.GetComponentsInChildren<Conector>())
             {
