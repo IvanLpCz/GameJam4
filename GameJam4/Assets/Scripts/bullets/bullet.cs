@@ -12,7 +12,7 @@ namespace bullets
         Transform look;
         private void Awake()
         {
-            look = GameObject.Find("aimPlayer").GetComponent<Transform>();
+            look = GameObject.Find("lookatP").GetComponent<Transform>();
             rb = GetComponent<Rigidbody>();
         }
         private void OnEnable()
