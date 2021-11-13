@@ -13,6 +13,7 @@ namespace player
         public float cd = 0.2f;
         private float lastShoot = 1;
 
+
         [SerializeField] private LayerMask groundMask;
 
         private void Start()
@@ -31,6 +32,7 @@ namespace player
         }
         IEnumerator shoot()
         {
+
             GameObject bullet = pooling.instance.GetPooledObject();
 
             if (bullet != null)

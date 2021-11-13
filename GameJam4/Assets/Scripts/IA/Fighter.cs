@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using RPG.Movement;
-using RPG.Core;
+using Movement;
+using Core;
+using Pools;
 
-namespace RPG.Combat
+namespace Combat
 {
     public class Fighter : MonoBehaviour, IAction
     {
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float weaponDamage = 5f;
-        
+        public Transform bulletPosition;
+
         Health target;
 
         float timeSinceLastAttack = Mathf.Infinity;
@@ -47,6 +49,13 @@ namespace RPG.Combat
 
         private void TriggerAttack()
         {
+            GameObject bullet = pooling.instance.GetPooledObject();
+
+            if (bullet != null)
+            {
+                bullet.transform.position = bulletPosition.position;
+                bullet.SetActive(true);
+            }
             GetComponent<Animator>().ResetTrigger("StopAtk");
             GetComponent<Animator>().SetTrigger("Attack");
         }

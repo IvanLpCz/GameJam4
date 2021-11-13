@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8694287281578973810}
   - component: {fileID: 3031519051794164580}
   - component: {fileID: 3321097117465969153}
-  - component: {fileID: -1136887315446543868}
+  - component: {fileID: -9032543681848743351}
   m_Layer: 0
-  m_Name: bala
+  m_Name: balaE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-1136887315446543868
+--- !u!114 &-9032543681848743351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +122,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2894207784885532248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d053c502d58bbd041bda31df5ed49553, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c348142d9e2ac14dac75c7185174d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletForce: 20
+  bm: {fileID: 0}

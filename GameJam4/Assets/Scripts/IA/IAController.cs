@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using RPG.Combat;
-using RPG.Core;
-using RPG.Movement;
+using Combat;
+using Core;
+using Movement;
 using System;
 
-namespace RPG.Control
+namespace Control
 {
     public class IAController : MonoBehaviour
     {
