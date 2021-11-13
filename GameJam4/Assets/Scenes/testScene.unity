@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 45.3
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 86522642}
   - component: {fileID: 86522641}
   - component: {fileID: 86522640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1012,6 +1012,9 @@ MonoBehaviour:
   cam: {fileID: 566082859}
   bulletPosition: {fileID: 184284819}
   cd: 0.2
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1291701480
 GameObject:
   m_ObjectHideFlags: 0

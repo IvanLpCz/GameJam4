@@ -9,22 +9,20 @@ namespace player
     public class aimPlayer : MonoBehaviour
     {
         public Camera cam;
-        private Vector3 mousePos;
         public Transform bulletPosition;
         public float cd = 0.2f;
         private float lastShoot = 1;
+
+        [SerializeField] private LayerMask groundMask;
+
         private void Start()
         {
-
+            cam = Camera.main;
         }
         private void Update()
         {
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 newMousePos = new Vector3(mousePos.x, 0f, mousePos.z);
+            Aim();
 
-            Vector3 direction = newMousePos - transform.position;
-            Quaternion newRotation = Quaternion.LookRotation(direction, Vector3.back);
-            transform.rotation = newRotation;
             if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > cd)
             {
                 StartCoroutine(shoot());
@@ -36,12 +34,40 @@ namespace player
             GameObject bullet = pooling.instance.GetPooledObject();
 
             if (bullet != null)
-            {             
+            {
                 bullet.transform.position = bulletPosition.position;
                 bullet.SetActive(true);
                 lastShoot = 0f;
             }
             yield return null;
+        }
+
+        private void Aim()
+        {
+
+            var (success, position) = GetMousePosition();
+            if (success)
+            {
+                Vector3 direction = position - transform.position;
+                direction.y = 0;                
+                transform.forward = direction;
+            }
+        }
+
+        private (bool success, Vector3 position) GetMousePosition()
+        {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out var hitInfo, Mathf.Infinity, groundMask))
+            {
+                
+                return (success: true, position: hitInfo.point);
+            }
+            else
+            {
+                
+                return (success: false, position: Vector3.zero);
+            }
         }
 
     }
