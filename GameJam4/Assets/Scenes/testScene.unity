@@ -1152,7 +1152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 566082859}
-  bulletPosition: {fileID: 184284819}
+  aimPos: {fileID: 184284819}
   cd: 0.2
   groundMask:
     serializedVersion: 2

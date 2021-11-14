@@ -12,7 +12,7 @@ namespace Combat
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float weaponDamage = 5f;
-        public Transform bulletPosition;
+        public Transform aimPos;
 
         Health target;
 
@@ -53,7 +53,8 @@ namespace Combat
 
             if (bullet != null)
             {
-                bullet.transform.position = bulletPosition.position;
+                bullet.transform.position = aimPos.position;
+                bullet.transform.rotation = aimPos.rotation;
                 bullet.SetActive(true);
             }
             GetComponent<Animator>().ResetTrigger("StopAtk");

@@ -9,7 +9,7 @@ namespace player
     public class aimPlayer : MonoBehaviour
     {
         public Camera cam;
-        public Transform bulletPosition;
+        public Transform aimPos;
         public float cd = 0.2f;
         private float lastShoot = 1;
 
@@ -34,10 +34,12 @@ namespace player
         {
 
             GameObject bullet = pooling.instance.GetPooledObject();
+            
 
             if (bullet != null)
             {
-                bullet.transform.position = bulletPosition.position;
+                bullet.transform.position = aimPos.position;
+                bullet.transform.rotation = aimPos.rotation;
                 bullet.SetActive(true);
                 lastShoot = 0f;
             }
