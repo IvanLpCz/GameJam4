@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Core;
 
 namespace bullets
 {
@@ -8,9 +9,12 @@ namespace bullets
     {
         Rigidbody rb;
         public float bulletForce = 20f;
+        public float bulletDamage = 10f;
+        Health health;
         private void Awake()
         {
             rb = GetComponent<Rigidbody>();
+            health = GetComponent<Health>();
         }
         private void OnEnable()
         {
@@ -20,6 +24,11 @@ namespace bullets
         }
         private void OnTriggerEnter(Collider collision)
         {
+            if (collision.gameObject.CompareTag("getHit"))
+            {
+                print("hula, te he dado"); 
+                health.TakeDamage(bulletDamage);
+            }
             gameObject.SetActive(false);
         }
     }

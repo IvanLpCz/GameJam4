@@ -28,11 +28,13 @@ namespace Combat
             if (!GetIsInRange())
             {
                 GetComponent<Mover>().MoveTo(target.transform.position, 1f);
+                GetComponent<Animator>().SetBool("inRange", false);
             }
             else
             {
                 GetComponent<Mover>().Cancel();
                 AttackBehaviour();
+                GetComponent<Animator>().SetBool("inRange", true);
             }
         }
 
@@ -60,8 +62,7 @@ namespace Combat
             GetComponent<Animator>().ResetTrigger("StopAtk");
             GetComponent<Animator>().SetTrigger("Attack");
         }
-
-        void Shoot()
+        void Shoot() 
         {
             if (target == null) return;
             target.TakeDamage(weaponDamage);

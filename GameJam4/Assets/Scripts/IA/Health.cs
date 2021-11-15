@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UI;
 
 namespace Core
 {
     public class Health : MonoBehaviour
     {
        [SerializeField] float healthPoints = 100f;
+       [SerializeField] float damageGiven;
 
         bool isDead = false;
+        public HealthBar healthBar;
 
         public bool IsDead()
         {
@@ -31,6 +34,15 @@ namespace Core
             isDead = true;
             GetComponent<Animator>().SetTrigger("Die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
+        }
+        private void OnTriggerEnter(Collider collision)
+        {
+            if (collision.gameObject.CompareTag("getHit"))
+            {
+                print("me han dado");
+                //health.TakeDamage(bulletDamage);
+            }
+
         }
     }
 }

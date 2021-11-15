@@ -9,6 +9,7 @@ namespace bullets
     {
         Rigidbody rb;
         public float bulletForce = 20f;
+        public float dmg = 5f;
         private void Awake()
         {
             rb = GetComponent<Rigidbody>();
@@ -21,6 +22,10 @@ namespace bullets
         }
         private void OnTriggerEnter(Collider collision)
         {
+            if (collision.gameObject.CompareTag("getHit"))
+            {
+                print("hula, te he dado");
+            }
             gameObject.SetActive(false);
         }
     }

@@ -24,7 +24,6 @@ namespace Control
         Vector3 guardPosition;
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceArriveWayPoint = Mathf.Infinity;
-        int currentWaypointIndex = 0;
 
         private void Start()
         {
