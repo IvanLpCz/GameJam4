@@ -934,7 +934,7 @@ GameObject:
   - component: {fileID: 522227109}
   m_Layer: 0
   m_Name: Destruction
-  m_TagString: SpawnPoint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2808,7 +2808,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 22.91
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2831,8 +2831,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332222419}
-  m_LocalRotation: {x: 0.23911765, y: 0.3696438, z: -0.09904577, w: 0.89239913}
-  m_LocalPosition: {x: -10, y: 8, z: -10}
+  m_LocalRotation: {x: 0.46440583, y: 0.032144696, z: -0.016869254, w: 0.8848782}
+  m_LocalPosition: {x: -2.84, y: 49.88, z: -33.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
