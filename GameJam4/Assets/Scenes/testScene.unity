@@ -1322,7 +1322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1103954676
 Animator:
   serializedVersion: 3
@@ -1332,8 +1332,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103954675}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 3081f3ebd863fb947817fb1c40e2f512, type: 3}
-  m_Controller: {fileID: 9100000, guid: 8ea4947538f37444bb1009cf8232298a, type: 2}
+  m_Avatar: {fileID: 9000000, guid: 8f6d978864bde0046b95e49822be26a3, type: 3}
+  m_Controller: {fileID: 9100000, guid: e9d3df7fd7f935544871fbb59b68c720, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
