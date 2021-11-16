@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pools;
+using weapons;
 
 namespace player
 {
@@ -13,7 +14,7 @@ namespace player
         public float cd = 0.2f;
         private float lastShoot = 1;
 
-
+        [SerializeField] public weaponScript WeaponScript;
         [SerializeField] private LayerMask groundMask;
 
         private void Start()
@@ -24,7 +25,7 @@ namespace player
         {
             Aim();
 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > cd)
+            if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > WeaponScript.fireRate)
             {
                 StartCoroutine(shoot());
             }

@@ -7,6 +7,8 @@ TagManager:
   - SpawnPoint
   - Rooms
   - getHit
+  - bala
+  - balaE
   layers:
   - Default
   - TransparentFX

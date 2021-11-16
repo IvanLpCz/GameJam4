@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class weaponEquiped : MonoBehaviour
 {
-    [SerializeField] weaponScript WeaponScript;
+    //[SerializeField] weaponScript WeaponScript;
 }
