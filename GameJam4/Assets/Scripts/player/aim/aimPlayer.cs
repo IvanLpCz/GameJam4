@@ -32,10 +32,8 @@ namespace player
         }
         IEnumerator shoot()
         {
-
-            GameObject bullet = pooling.instance.GetPooledObject();
+            GameObject bullet = objectPooling.SharedInstance.GetPooledObject("bala");
             
-
             if (bullet != null)
             {
                 bullet.transform.position = aimPos.position;

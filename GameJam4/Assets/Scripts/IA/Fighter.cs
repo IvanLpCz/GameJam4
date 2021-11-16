@@ -51,7 +51,7 @@ namespace Combat
 
         private void TriggerAttack()
         {
-            GameObject bullet = pooling.instance.GetPooledObject();
+            GameObject bullet = objectPooling.SharedInstance.GetPooledObject("balaE");
 
             if (bullet != null)
             {
