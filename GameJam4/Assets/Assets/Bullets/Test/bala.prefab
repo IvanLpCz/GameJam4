@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d053c502d58bbd041bda31df5ed49553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletForce: 20
-  dmg: 5
+  BasicBullet: {fileID: 11400000, guid: 85bd9559c3df916458e4319f4ecf88fe, type: 2}
+  bulletDamage: 0

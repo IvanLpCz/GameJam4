@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace weapons
 {
-    [CreateAssetMenu(fileName = "New Weapon", menuName = "Weapon Data")]
+    [CreateAssetMenu(fileName = "New Weapon", menuName = "Bullets/Weapon Data")]
     public class weaponScript : ScriptableObject
     {
         [SerializeField] public string weaponName;

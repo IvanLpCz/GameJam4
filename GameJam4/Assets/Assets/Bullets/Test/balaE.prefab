@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3031519051794164580}
   - component: {fileID: 3321097117465969153}
   - component: {fileID: -9032543681848743351}
-  - component: {fileID: -4955251182914117960}
   m_Layer: 7
   m_Name: balaE
   m_TagString: balaE
@@ -126,20 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c348142d9e2ac14dac75c7185174d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletForce: 20
-  bulletDamage: 10
---- !u!114 &-4955251182914117960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2894207784885532248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d79db28e5d7f0f4b980ac045e8240cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthPoints: 100
-  damageGiven: 0
-  healthBar: {fileID: 0}
+  BasicBullet: {fileID: 11400000, guid: c341831682bb7d94e829dcdf8e4889ff, type: 2}

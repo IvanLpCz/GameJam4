@@ -65,7 +65,7 @@ namespace Combat
         void Shoot() 
         {
             if (target == null) return;
-            target.TakeDamage(weaponDamage);
+            //target.TakeDamage(weaponDamage);
         }
 
         private bool GetIsInRange()
