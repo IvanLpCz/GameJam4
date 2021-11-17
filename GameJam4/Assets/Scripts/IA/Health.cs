@@ -11,13 +11,23 @@ namespace Core
        [SerializeField] float healthPoints = 100f;
        [SerializeField] bullet Bullet;
        [SerializeField] bulletE BulletE;
-
-        private float damageTaken;
+        public HealthBar healthBar;
+        private float damageTaken, maxHealth;
         bool isDead = false;
+        public bool isPlayer = false;
         private void Start()
         {
+            maxHealth = healthPoints;
             Bullet = GameObject.Find("bala").GetComponent<bullet>();
             BulletE = GameObject.Find("balaE").GetComponent<bulletE>();
+            healthBar.SetMaxHealth(maxHealth);
+        }
+        private void Update()
+        {
+            if (isPlayer)
+            {
+                healthBar.SetHealth(healthPoints);
+            }
         }
         public bool IsDead()
         {

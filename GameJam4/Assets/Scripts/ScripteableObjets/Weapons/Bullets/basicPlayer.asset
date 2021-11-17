@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: basicPlayer
   m_EditorClassIdentifier: 
   bulletForce: 20
-  bulletDamage: 10
+  bulletDamage: 15
