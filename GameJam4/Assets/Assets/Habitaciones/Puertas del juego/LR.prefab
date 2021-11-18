@@ -119,6 +119,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4806645473219655661}
   - component: {fileID: 1233657243926841861}
+  - component: {fileID: 1646260129271690175}
+  - component: {fileID: 8659398512952580510}
   m_Layer: 0
   m_Name: Entrar trigger
   m_TagString: Untagged
@@ -153,6 +155,63 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1646260129271690175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984177360303453665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5070fe18c85b95f42a0e9a5e968a2023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraSpot: {fileID: 1596369477050219863}
+--- !u!114 &8659398512952580510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984177360303453665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4e42603002c094b938a7b48957c065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomRend: {fileID: 4945952877562088599}
+  isLeaving: 0
+--- !u!1 &1596369477050219863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6052453958918380621}
+  m_Layer: 0
+  m_Name: CameraSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6052453958918380621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596369477050219863}
+  m_LocalRotation: {x: 0.23911765, y: -0.3696438, z: 0.09904577, w: 0.89239913}
+  m_LocalPosition: {x: 13, y: 15.714284, z: -13}
+  m_LocalScale: {x: 0.2, y: 0.2580645, z: 0.21621622}
+  m_Children: []
+  m_Father: {fileID: 3220346736397415826}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 30, y: -45, z: 0}
 --- !u!1 &1880631666081917676
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +222,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4090446957810869303}
   - component: {fileID: 6082438067825858521}
+  - component: {fileID: 2202596547275811721}
+  - component: {fileID: 6285039458777819067}
   m_Layer: 0
   m_Name: Entrar trigger
   m_TagString: Untagged
@@ -197,6 +258,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2202596547275811721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880631666081917676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5070fe18c85b95f42a0e9a5e968a2023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraSpot: {fileID: 1596369477050219863}
+--- !u!114 &6285039458777819067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880631666081917676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4e42603002c094b938a7b48957c065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomRend: {fileID: 4945952877562088599}
+  isLeaving: 0
 --- !u!1 &3220346736397415825
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,14 +310,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3220346736397415825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.05, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 3.5, z: 5}
   m_Children:
   - {fileID: 8946813005473316275}
   - {fileID: 7789414377223727852}
   - {fileID: 6221428331315973047}
   - {fileID: 1221253807904021744}
   - {fileID: 191236698291673843}
+  - {fileID: 6052453958918380621}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -255,6 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 550072968899344992}
   - component: {fileID: 6759172032060649390}
+  - component: {fileID: 6573600680353227002}
   m_Layer: 0
   m_Name: Salir trigger
   m_TagString: Untagged
@@ -289,6 +379,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6573600680353227002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4692597240340865986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4e42603002c094b938a7b48957c065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomRend: {fileID: 4945952877562088599}
+  isLeaving: 1
 --- !u!1 &6462527600964657943
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 741982192861411687}
   - component: {fileID: 7458721486088014009}
+  - component: {fileID: 2154516991367369346}
   m_Layer: 0
   m_Name: Salir trigger
   m_TagString: Untagged
@@ -442,6 +547,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2154516991367369346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7507675058435037966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4e42603002c094b938a7b48957c065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomRend: {fileID: 4945952877562088599}
+  isLeaving: 1
 --- !u!1001 &3220346736145040616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -501,8 +620,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7499467154613028991, guid: fe537404cf60d9240acec9b58079125e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe537404cf60d9240acec9b58079125e, type: 3}
+--- !u!23 &4945952877562088599 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7499467154613028991, guid: fe537404cf60d9240acec9b58079125e, type: 3}
+  m_PrefabInstance: {fileID: 3220346736145040616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8946813005473316275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5807830759282014555, guid: fe537404cf60d9240acec9b58079125e, type: 3}

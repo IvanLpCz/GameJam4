@@ -15,11 +15,11 @@ D:/Usuarios/ivan.lopez/Documents/GitHub/GameJam4/GameJam4
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55447
+55594
 Successfully changed project path to: D:/Usuarios/ivan.lopez/Documents/GitHub/GameJam4/GameJam4
 D:/Usuarios/ivan.lopez/Documents/GitHub/GameJam4/GameJam4
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 39.18 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 39.24 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,37 +35,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56676
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56468
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001252 seconds.
+Registered in 0.001340 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 40.45 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 41.58 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.923 seconds
+- Completed reload, in  0.945 seconds
 Domain Reload Profiling:
-	ReloadAssembly (923ms)
-		BeginReloadAssembly (46ms)
+	ReloadAssembly (946ms)
+		BeginReloadAssembly (67ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (380ms)
-			LoadAssemblies (44ms)
+		EndReloadAssembly (372ms)
+			LoadAssemblies (65ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (126ms)
+			SetupTypeCache (122ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (161ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (155ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (41ms)
-				BeforeProcessingInitializeOnLoad (15ms)
-				ProcessInitializeOnLoadAttributes (78ms)
+				RefreshPlugins (42ms)
+				BeforeProcessingInitializeOnLoad (16ms)
+				ProcessInitializeOnLoadAttributes (69ms)
 				ProcessInitializeOnLoadMethodAttributes (24ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -73,51 +73,51 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001929 seconds.
+Registered in 0.002095 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 40.80 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 40.29 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.073 seconds
+- Completed reload, in  1.076 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1076ms)
-		BeginReloadAssembly (135ms)
+	ReloadAssembly (1077ms)
+		BeginReloadAssembly (128ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (890ms)
-			LoadAssemblies (78ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (899ms)
+			LoadAssemblies (76ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (318ms)
+			SetupTypeCache (248ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (341ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (420ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (41ms)
-				BeforeProcessingInitializeOnLoad (77ms)
-				ProcessInitializeOnLoadAttributes (211ms)
+				RefreshPlugins (40ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (290ms)
 				ProcessInitializeOnLoadMethodAttributes (4ms)
-				AfterProcessingInitializeOnLoad (4ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2747 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 127.7 MB.
 System memory in use after: 127.9 MB.
 
 Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3185.
-Total: 2.884800 ms (FindLiveObjects: 0.231300 ms CreateObjectMapping: 0.104200 ms MarkObjects: 2.447600 ms  DeleteObjects: 0.100900 ms)
+Total: 2.727400 ms (FindLiveObjects: 0.223200 ms CreateObjectMapping: 0.113600 ms MarkObjects: 2.329200 ms  DeleteObjects: 0.060700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,216 +131,64 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Assets/Animations/prota/escopeta
-  artifactKey: Guid(2a0824c5f6aec8542b022480fb08eed8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta using Guid(2a0824c5f6aec8542b022480fb08eed8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d115e7857e873748cde82f30b563d72') in 0.004735 seconds 
-  Import took 0.008007 seconds .
+  path: Assets/Assets/Animations/prota/escopeta/escopetazo en el pechoC D .fbx
+  artifactKey: Guid(d7f2db94cb6018149a7dbd152f3764f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Animations/prota/escopeta/escopetazo en el pechoC D .fbx using Guid(d7f2db94cb6018149a7dbd152f3764f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea4b32631252229ca16ac00ecb986197') in 0.269411 seconds 
+  Import took 0.273261 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.243232 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopeta en el pechofrente.fbx
-  artifactKey: Guid(79d6facb649c96a4ebe64e46d08aba0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopeta en el pechofrente.fbx using Guid(79d6facb649c96a4ebe64e46d08aba0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0429b3ce169ef3fe3e5fb09f61273469') in 0.268979 seconds 
-  Import took 0.272872 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopetafrente.fbx
-  artifactKey: Guid(def86b55f1418164ea5493013b532057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopetafrente.fbx using Guid(def86b55f1418164ea5493013b532057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b3e513864e964ed443a5bd9e032a447') in 0.045261 seconds 
-  Import took 0.048770 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopetacorrer izquierda .fbx
-  artifactKey: Guid(ad1ff948c4decc646ab0ab41c956e393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopetacorrer izquierda .fbx using Guid(ad1ff948c4decc646ab0ab41c956e393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2af0d1d2cf80ce1718cac0485423d35f') in 0.051513 seconds 
-  Import took 0.055038 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopetacorrer derecha .fbx
-  artifactKey: Guid(89ace99effb57034e874253de3d9c474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopetacorrer derecha .fbx using Guid(89ace99effb57034e874253de3d9c474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa9f1dc0859ec9af788f55e38311a39f') in 0.044822 seconds 
-  Import took 0.048483 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.447210 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopeta en el pechofrente.fbx
-  artifactKey: Guid(79d6facb649c96a4ebe64e46d08aba0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopeta en el pechofrente.fbx using Guid(79d6facb649c96a4ebe64e46d08aba0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d3264af0166c46b7f9d2450b5e7df9f') in 0.055346 seconds 
-  Import took 0.059278 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000238 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopetafrente.fbx
-  artifactKey: Guid(def86b55f1418164ea5493013b532057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopetafrente.fbx using Guid(def86b55f1418164ea5493013b532057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd13227897f30b5596f1172a21deaf02a') in 0.054653 seconds 
-  Import took 0.058146 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000234 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopetacorrer izquierda .fbx
-  artifactKey: Guid(ad1ff948c4decc646ab0ab41c956e393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopetacorrer izquierda .fbx using Guid(ad1ff948c4decc646ab0ab41c956e393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '830e66fa0f879042d85f3bd26ad33324') in 0.059629 seconds 
-  Import took 0.063234 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000233 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopetacorrer derecha .fbx
-  artifactKey: Guid(89ace99effb57034e874253de3d9c474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopetacorrer derecha .fbx using Guid(89ace99effb57034e874253de3d9c474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0ac64d2e4fe7e4a83f6d62f9bb470e6') in 0.066447 seconds 
-  Import took 0.070087 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.471613 seconds.
-  path: Assets/Assets/Animations/prota/prot.controller
-  artifactKey: Guid(a886d767f0996644e8b1c3260e242ad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/prot.controller using Guid(a886d767f0996644e8b1c3260e242ad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a69fc879eefa02111c1e7594846ccee3') in 0.004919 seconds 
-  Import took 0.009012 seconds .
+  Time since last request: 14.709290 seconds.
+  path: Assets/Assets/Animations/prota/escopeta/escopetazo en el pechoC I.fbx
+  artifactKey: Guid(3c9377ad9efa95940bea12f8d257a109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Animations/prota/escopeta/escopetazo en el pechoC I.fbx using Guid(3c9377ad9efa95940bea12f8d257a109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4f3e957e965d4ee28c62952eb73a13f') in 0.058598 seconds 
+  Import took 0.075834 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002063 seconds.
+Registered in 0.002026 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.920 seconds
+- Completed reload, in  0.921 seconds
 Domain Reload Profiling:
-	ReloadAssembly (920ms)
-		BeginReloadAssembly (118ms)
+	ReloadAssembly (922ms)
+		BeginReloadAssembly (133ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (32ms)
-		EndReloadAssembly (752ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (738ms)
 			LoadAssemblies (70ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (247ms)
+			SetupTypeCache (239ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (273ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (78ms)
-				ProcessInitializeOnLoadAttributes (182ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (14ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2623 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 138.4 MB.
-System memory in use after: 138.6 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3269.
-Total: 3.033800 ms (FindLiveObjects: 0.214800 ms CreateObjectMapping: 0.096700 ms MarkObjects: 2.707300 ms  DeleteObjects: 0.014300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 57.662087 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopeta en el pechofrente.fbx
-  artifactKey: Guid(79d6facb649c96a4ebe64e46d08aba0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopeta en el pechofrente.fbx using Guid(79d6facb649c96a4ebe64e46d08aba0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29ad5342811d875589d435b1dcc79605') in 0.210371 seconds 
-  Import took 0.214500 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.359488 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopetacorrer derecha .fbx
-  artifactKey: Guid(89ace99effb57034e874253de3d9c474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopetacorrer derecha .fbx using Guid(89ace99effb57034e874253de3d9c474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b3c24036f17535208e20a3b2160ca0c') in 0.066159 seconds 
-  Import took 0.070161 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.147387 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopetacorrer izquierda .fbx
-  artifactKey: Guid(ad1ff948c4decc646ab0ab41c956e393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopetacorrer izquierda .fbx using Guid(ad1ff948c4decc646ab0ab41c956e393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bed3b1880caf369c2d822256cc8b2c0') in 0.064043 seconds 
-  Import took 0.068064 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.413224 seconds.
-  path: Assets/Assets/Animations/prota/escopeta/escopetafrente.fbx
-  artifactKey: Guid(def86b55f1418164ea5493013b532057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Animations/prota/escopeta/escopetafrente.fbx using Guid(def86b55f1418164ea5493013b532057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '910bec0af4c37d4aaf66141ef982ca47') in 0.057588 seconds 
-  Import took 0.074936 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002210 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.943 seconds
-Domain Reload Profiling:
-	ReloadAssembly (944ms)
-		BeginReloadAssembly (104ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (33ms)
-		EndReloadAssembly (790ms)
-			LoadAssemblies (70ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (241ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (312ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (262ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (74ms)
-				ProcessInitializeOnLoadAttributes (225ms)
-				ProcessInitializeOnLoadMethodAttributes (4ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (174ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (16ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2623 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 138.6 MB.
-System memory in use after: 138.8 MB.
+System memory in use before: 138.3 MB.
+System memory in use after: 138.5 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3307.
-Total: 3.050500 ms (FindLiveObjects: 0.284200 ms CreateObjectMapping: 0.181500 ms MarkObjects: 2.571300 ms  DeleteObjects: 0.012800 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3269.
+Total: 2.875400 ms (FindLiveObjects: 0.215900 ms CreateObjectMapping: 0.095900 ms MarkObjects: 2.550000 ms  DeleteObjects: 0.013000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
