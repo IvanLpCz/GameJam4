@@ -13,6 +13,8 @@ namespace player
         [SerializeField] movespeedScripteable MovespeedScripteable;
         private Vector3 forward, right;
         public bool canDash = true;
+        private bool isWall;
+        public float bounce = 2f;
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
@@ -30,7 +32,10 @@ namespace player
         }
         private void FixedUpdate()
         {
-            move();
+            if (!isWall)
+            {
+                move();
+            }      
         }
         private void move()
         {           
@@ -54,6 +59,18 @@ namespace player
 
             rb.velocity = Vector3.zero;
             canDash = true;
+        }
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("wall"))
+            {
+                isWall = true;
+                rb.AddForce(-transform.forward * bounce, ForceMode.VelocityChange);
+            }
+        }
+        private void OnCollisionExit(Collision collision)
+        {
+            isWall = false;
         }
 
     }

@@ -9,6 +9,7 @@ TagManager:
   - getHit
   - bala
   - balaE
+  - wall
   layers:
   - Default
   - TransparentFX

@@ -737,6 +737,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6488158375775726079, guid: 7bbd5b6beebc13e4cb064dc12e78d0b5, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 6721512454621849290, guid: 7bbd5b6beebc13e4cb064dc12e78d0b5, type: 3}
       propertyPath: m_Name
       value: Atras Izquierda

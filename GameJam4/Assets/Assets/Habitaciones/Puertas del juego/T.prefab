@@ -440,6 +440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arriba
       objectReference: {fileID: 0}
+    - target: {fileID: 1519659441550661615, guid: cd84b876eae67ee49a78392281a2c2af, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 1805997071397634656, guid: cd84b876eae67ee49a78392281a2c2af, type: 3}
       propertyPath: m_RootOrder
       value: 0

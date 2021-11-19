@@ -745,6 +745,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6674147441172294868, guid: fe537404cf60d9240acec9b58079125e, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 7499467154613028991, guid: fe537404cf60d9240acec9b58079125e, type: 3}
       propertyPath: m_Enabled
       value: 0
