@@ -143,6 +143,7 @@ Transform:
   - {fileID: 7143053313756824350}
   - {fileID: 6004251351189837529}
   - {fileID: 2368909708895904627}
+  - {fileID: 7263624969794615186}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -247,6 +248,102 @@ Transform:
   m_Father: {fileID: 3473417035170823301}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 30, y: -45, z: 0}
+--- !u!1 &4244212990110946166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7263624969794615186}
+  - component: {fileID: 8315173550903763376}
+  - component: {fileID: 8876917306428203729}
+  - component: {fileID: 5108366737597854518}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7263624969794615186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244212990110946166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -50, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3473417035170823301}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8315173550903763376
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244212990110946166}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8876917306428203729
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244212990110946166}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 3e97d3312fc6ade40b8e0f4964f52cab, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5108366737597854518
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244212990110946166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &5350760452372889346
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +356,7 @@ GameObject:
   - component: {fileID: 471661639164845823}
   - component: {fileID: 4381510972123251913}
   - component: {fileID: 8849984592027172007}
+  - component: {fileID: 7532685737501839274}
   m_Layer: 0
   m_Name: Entrar trigger
   m_TagString: Untagged
@@ -320,6 +418,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomRend: {fileID: 6823727290267435303}
   isLeaving: 0
+--- !u!114 &7532685737501839274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5350760452372889346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f32f77ccee5884082ab3c2fd6e43af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileRend: {fileID: 8876917306428203729}
 --- !u!1 &5517208717904468969
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +611,7 @@ GameObject:
   - component: {fileID: 5503839258639747944}
   - component: {fileID: 3579264696302521731}
   - component: {fileID: 3933479712325359713}
+  - component: {fileID: 2874611849226454578}
   m_Layer: 0
   m_Name: Entrar trigger
   m_TagString: Untagged
@@ -561,6 +673,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomRend: {fileID: 6823727290267435303}
   isLeaving: 0
+--- !u!114 &2874611849226454578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925453815352386948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f32f77ccee5884082ab3c2fd6e43af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileRend: {fileID: 8876917306428203729}
 --- !u!1001 &3473417034813049971
 PrefabInstance:
   m_ObjectHideFlags: 0
