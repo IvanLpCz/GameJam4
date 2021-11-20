@@ -43,12 +43,12 @@ GameObject:
   - component: {fileID: 6096967649452699547}
   - component: {fileID: 2421470047843218244}
   - component: {fileID: 2506734142934287066}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &3270060103208818949
 Transform:
@@ -79,7 +79,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519659441550661615}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -91,11 +91,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6629797300637803691, guid: c2c304d9014bcf44da8f02f7dfb1fb93, type: 3}
-  - {fileID: -6478536213147159724, guid: c2c304d9014bcf44da8f02f7dfb1fb93, type: 3}
-  - {fileID: -6922793697723135513, guid: c2c304d9014bcf44da8f02f7dfb1fb93, type: 3}
-  - {fileID: -3846018093981099296, guid: c2c304d9014bcf44da8f02f7dfb1fb93, type: 3}
-  - {fileID: 4874126678125670354, guid: c2c304d9014bcf44da8f02f7dfb1fb93, type: 3}
+  - {fileID: 2100000, guid: 86500f2152693c44a8798da2c7a03bd5, type: 2}
+  - {fileID: 2100000, guid: dca569f766c6127428feabbbef70834d, type: 2}
+  - {fileID: 2100000, guid: eec9341edf4d3634586876a4e91ee9ab, type: 2}
+  - {fileID: 2100000, guid: 19510cc5b583c39478cd16063c84438f, type: 2}
+  - {fileID: 2100000, guid: 374a9e8e43a557849bdb58dc378e45de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
