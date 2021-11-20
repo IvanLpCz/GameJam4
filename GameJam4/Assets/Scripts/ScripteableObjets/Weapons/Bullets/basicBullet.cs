@@ -9,5 +9,7 @@ namespace Scripteable_Bullet
     {
         [SerializeField] public float bulletForce = 20f;
         [SerializeField] public float bulletDamage = 10f;
+
+
     }
 }
