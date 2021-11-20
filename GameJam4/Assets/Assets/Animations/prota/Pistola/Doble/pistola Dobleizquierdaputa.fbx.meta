@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 3c9377ad9efa95940bea12f8d257a109
+guid: 541a10b8a6154cf408b86bb0f6b37a39
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -5440173259782676403
-    second: C I
+      74: 5074776840878443906
+    second: izquierdaputa
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -93,11 +93,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 589aa682c5122f14f8796da2df188a61, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
