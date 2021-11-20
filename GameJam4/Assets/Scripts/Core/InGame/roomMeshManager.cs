@@ -7,6 +7,7 @@ namespace Game_Core
     public class roomMeshManager : MonoBehaviour
     {
         public Renderer roomRend;
+        public GameObject lengueta;
         public bool isLeaving;
 
         private void OnTriggerEnter(Collider other)
@@ -14,10 +15,13 @@ namespace Game_Core
             if (isLeaving)
             {
                 roomRend.enabled = false;
+                lengueta.SetActive(false);
             }
             if (!isLeaving)
             {
                 roomRend.enabled = true;
+                lengueta.SetActive(true);
+
             }
         }
     }
