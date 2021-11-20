@@ -14,7 +14,9 @@ namespace player
         public float cd = 0.2f;
         private float lastShoot = 1;
         public bool handgun, shotgun, ar;
+        private bool canShotgun, canAr;
         private float fireRate;
+        private float ammoAR, ammoShotgun;
 
         [SerializeField] public weaponScript[] WeaponScript;
         [SerializeField] private LayerMask groundMask;
@@ -29,10 +31,10 @@ namespace player
         private void Update()
         {
             Aim();
+            ammoManagement();
             gunManagement();
             if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > fireRate && handgun)
             {
-                //StartCoroutine(shoot());
                 shootHandGun();
             }
             if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > fireRate && shotgun)
@@ -46,19 +48,42 @@ namespace player
             lastShoot = Time.deltaTime + lastShoot;
         }
 
+        void ammoManagement()
+        {
+            if(ammoAR > 0)
+            {
+                canAr = true;
+            }
+            else
+            {
+                canAr = false;
+            }
+            if(ammoShotgun > 0)
+            {
+                canShotgun = true;
+            }
+            else
+            {
+                canShotgun = false;
+            }
+        }
         private void gunManagement()
         {
-            if (Input.GetKey(KeyCode.Alpha1))
+            if (Input.GetKey(KeyCode.Alpha1) && canAr)
             {
                 ar = true;
                 shotgun = false;
                 handgun = false;
+
+                ammoAR = ammoAR - 1;
             }
-            if (Input.GetKey(KeyCode.Alpha2))
+            if (Input.GetKey(KeyCode.Alpha2) && canShotgun)
             {
                 ar = false;
                 shotgun = true;
                 handgun = false;
+
+                ammoShotgun = ammoShotgun - 1;
             }
             if (Input.GetKey(KeyCode.Alpha3))
             {
@@ -75,13 +100,13 @@ namespace player
             if (shotgun)
             {
                 fireRate = WeaponScript[1].fireRate;
-                print("escopeta activa " + "su cadencia es de " + fireRate);
+                print("escopeta activa " + "su cadencia es de " + fireRate + "su munición restante es de: " + ammoShotgun);
                 bulletShotGun = objectPooling.SharedInstance.GetPooledObject("balaEscopeta");
             }
             if (ar)
             {
                 fireRate = WeaponScript[2].fireRate;
-                print("rifle de asalto activo " + "su cadencia es de " + fireRate);
+                print("rifle de asalto activo " + "su cadencia es de " + fireRate + "su munición restante es de: " + ammoAR);
                 bulletAR = objectPooling.SharedInstance.GetPooledObject("balaAR");
             }
         }
@@ -141,6 +166,18 @@ namespace player
             {
                 
                 return (success: false, position: Vector3.zero);
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("ammoAR"))
+            {
+                ammoAR = ammoAR + 60;
+            }
+            if (other.gameObject.CompareTag("ammoShotgun"))
+            {
+                ammoShotgun = ammoShotgun + 12;
             }
         }
 

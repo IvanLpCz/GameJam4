@@ -12,6 +12,8 @@ TagManager:
   - wall
   - balaAR
   - balaEscopeta
+  - ammoAR
+  - ammoShotgun
   layers:
   - Default
   - TransparentFX
