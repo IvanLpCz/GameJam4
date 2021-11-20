@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: shotGun
   m_EditorClassIdentifier: 
   weaponName: Popeta
-  damage: 20
-  skill: {fileID: 0}
+  damage: 15
   fireRate: 1

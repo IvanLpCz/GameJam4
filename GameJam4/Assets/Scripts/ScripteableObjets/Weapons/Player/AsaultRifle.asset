@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: AR
   damage: 8
-  skill: {fileID: 0}
-  fireRate: 0.1
+  fireRate: 0.2

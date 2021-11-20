@@ -10,6 +10,8 @@ TagManager:
   - bala
   - balaE
   - wall
+  - balaAR
+  - balaEscopeta
   layers:
   - Default
   - TransparentFX

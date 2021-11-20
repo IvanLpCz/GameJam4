@@ -13,36 +13,107 @@ namespace player
         public Transform aimPos;
         public float cd = 0.2f;
         private float lastShoot = 1;
+        public bool handgun, shotgun, ar;
+        private float fireRate;
 
-        [SerializeField] public weaponScript WeaponScript;
+        [SerializeField] public weaponScript[] WeaponScript;
         [SerializeField] private LayerMask groundMask;
+
+        private GameObject bulletHandgun, bulletShotGun, bulletAR;
 
         private void Start()
         {
             cam = Camera.main;
+            handgun = true;
         }
         private void Update()
         {
             Aim();
-
-            if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > WeaponScript.fireRate)
+            gunManagement();
+            if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > fireRate && handgun)
             {
-                StartCoroutine(shoot());
+                //StartCoroutine(shoot());
+                shootHandGun();
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > fireRate && shotgun)
+            {
+                shootShotGun();
+            }
+            if (Input.GetKey(KeyCode.Mouse0) && lastShoot > fireRate && ar)
+            {
+                shootAR();
             }
             lastShoot = Time.deltaTime + lastShoot;
         }
-        IEnumerator shoot()
+
+        private void gunManagement()
         {
-            GameObject bullet = objectPooling.SharedInstance.GetPooledObject("bala");
-            
-            if (bullet != null)
+            if (Input.GetKey(KeyCode.Alpha1))
             {
-                bullet.transform.position = aimPos.position;
-                bullet.transform.rotation = aimPos.rotation;
-                bullet.SetActive(true);
+                ar = true;
+                shotgun = false;
+                handgun = false;
+            }
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                ar = false;
+                shotgun = true;
+                handgun = false;
+            }
+            if (Input.GetKey(KeyCode.Alpha3))
+            {
+                ar = false;
+                shotgun = false;
+                handgun = true;
+            }
+            if (handgun)
+            {
+                fireRate = WeaponScript[0].fireRate;
+                print("pistola activa " + "su cadencia es de " + fireRate);
+                bulletHandgun = objectPooling.SharedInstance.GetPooledObject("bala");
+            }
+            if (shotgun)
+            {
+                fireRate = WeaponScript[1].fireRate;
+                print("escopeta activa " + "su cadencia es de " + fireRate);
+                bulletShotGun = objectPooling.SharedInstance.GetPooledObject("balaEscopeta");
+            }
+            if (ar)
+            {
+                fireRate = WeaponScript[2].fireRate;
+                print("rifle de asalto activo " + "su cadencia es de " + fireRate);
+                bulletAR = objectPooling.SharedInstance.GetPooledObject("balaAR");
+            }
+        }
+        void shootAR()
+        {
+            if(bulletAR != null)
+            {
+                bulletAR.transform.position = aimPos.position;
+                bulletAR.transform.rotation = aimPos.rotation;
+                bulletAR.SetActive(true);
                 lastShoot = 0f;
             }
-            yield return null;
+        }
+        void shootHandGun()
+        {
+            if (bulletHandgun != null)
+            {
+                bulletHandgun.transform.position = aimPos.position;
+                bulletHandgun.transform.rotation = aimPos.rotation;
+                bulletHandgun.SetActive(true);
+                lastShoot = 0f;
+            }
+        }
+        void shootShotGun()
+        {
+            if (bulletShotGun != null)
+            {
+                bulletShotGun.transform.position = aimPos.position;
+                bulletShotGun.transform.rotation = aimPos.rotation;
+                bulletShotGun.SetActive(true);
+                lastShoot = 0f;
+            }
         }
 
         private void Aim()

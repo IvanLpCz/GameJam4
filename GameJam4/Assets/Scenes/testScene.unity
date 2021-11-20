@@ -305,6 +305,12 @@ MonoBehaviour:
   - amountToPool: 20
     objectToPool: {fileID: 2894207784885532248, guid: 42b99e44baec60748b201ce8e082ad17, type: 3}
     shouldExpand: 0
+  - amountToPool: 20
+    objectToPool: {fileID: 2894207784885532248, guid: 6f6469df8a598e544bde34455ccd528e, type: 3}
+    shouldExpand: 0
+  - amountToPool: 20
+    objectToPool: {fileID: 2894207784885532248, guid: b2751acca48afeb40a0cac9a296228ba, type: 3}
+    shouldExpand: 0
   pooledObjects: []
 --- !u!4 &204502520
 Transform:
@@ -1511,7 +1517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1103954676
 Animator:
   serializedVersion: 3
@@ -1936,6 +1942,7 @@ MonoBehaviour:
   dashScripteable: {fileID: 11400000, guid: 70d7953accb94de4ab6b718802d26241, type: 2}
   MovespeedScripteable: {fileID: 11400000, guid: e5105126a22a869429332dad42999a4f, type: 2}
   canDash: 1
+  bounce: 2
 --- !u!136 &1280413840
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2032,7 +2039,13 @@ MonoBehaviour:
   cam: {fileID: 566082859}
   aimPos: {fileID: 184284819}
   cd: 0.2
-  WeaponScript: {fileID: 11400000, guid: 7728d776cf3431543a9ccd84fb1c66fd, type: 2}
+  handgun: 0
+  shotgun: 0
+  ar: 0
+  WeaponScript:
+  - {fileID: 11400000, guid: 2207e6b640b791d44b74d4b9972af7eb, type: 2}
+  - {fileID: 11400000, guid: f3734709be1e72d4dbe7b9f3d42b23f9, type: 2}
+  - {fileID: 11400000, guid: 7728d776cf3431543a9ccd84fb1c66fd, type: 2}
   groundMask:
     serializedVersion: 2
     m_Bits: 64
