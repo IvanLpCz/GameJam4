@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4fcbe46c3bdb3c47bd7204ffa4377e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponRange: 9
+  weaponRange: 12
   timeBetweenAttacks: 1
   weaponDamage: 5
   aimPos: {fileID: 870107456505723532}
@@ -397,12 +397,17 @@ MonoBehaviour:
   healthPoints: 100
   Bullet: {fileID: 0}
   BulletE: {fileID: 0}
+  AR: {fileID: 0}
+  shotgun: {fileID: 0}
+  shotgunR: {fileID: 0}
+  shotgunL: {fileID: 0}
   healthBar: {fileID: 0}
   isDead: 0
   isPlayer: 0
   deathCanvas: {fileID: 0}
   hudCanvas: {fileID: 0}
   deathSound: {fileID: 2966042653616648192}
+  dmgBunus: 0
 --- !u!114 &3197711977428475825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +489,7 @@ MonoBehaviour:
   Loot:
   - {fileID: 4863572937184863489, guid: 9608c03e3c1f22147bef1cc693874aab, type: 3}
   - {fileID: 2893276840301588678, guid: 3acad116af6b39d46a8ba77ec1fecd89, type: 3}
-  - {fileID: 8847110302258509222, guid: bf1d8eb6ddca0f84180a2b03a0a9e9cb, type: 3}
+  - {fileID: 1692255696601716823, guid: bd6111929d507cf43b8b8c144e2b8492, type: 3}
   - {fileID: 1284531579211578072, guid: 95c0c2793dbdab7458624225b16aff31, type: 3}
   - {fileID: 5126275815799628768, guid: f4bc5d7ab0618f24c9bf8a4f53c89ea9, type: 3}
   - {fileID: 8229717973351759447, guid: 2bd99021ca82561468776d6f6c12cf36, type: 3}
