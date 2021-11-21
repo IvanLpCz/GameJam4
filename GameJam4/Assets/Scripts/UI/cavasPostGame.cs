@@ -8,7 +8,10 @@ public class cavasPostGame : MonoBehaviour
 {
     public Button tryAgame, salir, exit;
     private Scene actualScene;
-
+    public void Start()
+    {
+        actualScene = SceneManager.GetActiveScene();
+    }
     public void RestartButton()
     {
         SceneManager.LoadScene(actualScene.name);
