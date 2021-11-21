@@ -11,6 +11,11 @@ namespace Core
        [SerializeField] float healthPoints = 100f;
        [SerializeField] bullet Bullet;
        [SerializeField] bulletE BulletE;
+       [SerializeField] bullet AR;
+       [SerializeField] bullet shotgun;
+       [SerializeField] bullet shotgunR;
+       [SerializeField] bullet shotgunL;
+
         public HealthBar healthBar;
         private float damageTaken, maxHealth;
         public bool isDead = false;
@@ -22,11 +27,12 @@ namespace Core
             maxHealth = healthPoints;
             Bullet = GameObject.Find("bala").GetComponent<bullet>();
             BulletE = GameObject.Find("balaE").GetComponent<bulletE>();
-            healthBar.SetMaxHealth(maxHealth);
-            if (!isPlayer)
-            {
-                healthBar = null;
-            }
+            AR = GameObject.Find("balaAR").GetComponent<bullet>();
+            shotgun = GameObject.Find("balaEscopeta").GetComponent<bullet>();
+            shotgunR = GameObject.Find("balaEscopetaR").GetComponent<bullet>();
+            shotgunL = GameObject.Find("balaEscopetaL").GetComponent<bullet>();
+
+                healthBar.SetMaxHealth(maxHealth);
         }
         private void Update()
         {
@@ -78,6 +84,30 @@ namespace Core
             if (collision.gameObject.CompareTag("balaE"))
             {
                 damageTaken = BulletE.bulletDamage;
+                print("bossdmg" + damageTaken);
+                TakeDamage();
+            }
+            if (collision.gameObject.CompareTag("balaAR"))
+            {
+                damageTaken = AR.bulletDamage;
+                print("bossdmg" + damageTaken);
+                TakeDamage();
+            }
+            if (collision.gameObject.CompareTag("balaEscopeta"))
+            {
+                damageTaken = shotgun.bulletDamage;
+                print("bossdmg" + damageTaken);
+                TakeDamage();
+            }
+            if (collision.gameObject.CompareTag("balaEscopetaR"))
+            {
+                damageTaken = shotgunR.bulletDamage;
+                print("bossdmg" + damageTaken);
+                TakeDamage();
+            }
+            if (collision.gameObject.CompareTag("balaEscopetaL"))
+            {
+                damageTaken = shotgunL.bulletDamage;
                 print("bossdmg" + damageTaken);
                 TakeDamage();
             }

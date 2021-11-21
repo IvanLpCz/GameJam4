@@ -12,7 +12,7 @@ namespace player
         [SerializeField] DashScipteable dashScripteable;
         [SerializeField] movespeedScripteable MovespeedScripteable;
         private Vector3 forward, right;
-        public bool canDash = true;
+        public bool canDash = false;
         private bool isWall;
         public float bounce = 2f;
         private void Start()
@@ -85,6 +85,12 @@ namespace player
         {
             isWall = false;
         }
-
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("PerkD"))
+            {
+                canDash = true;
+            }
+        }
     }
 }
