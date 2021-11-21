@@ -18,6 +18,13 @@ namespace Combat
 
         float timeSinceLastAttack = Mathf.Infinity;
 
+        AudioSource audioSource;
+
+        private void Start()
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+
         private void Update()
         {
             timeSinceLastAttack += Time.deltaTime;
@@ -44,6 +51,7 @@ namespace Combat
             if(timeSinceLastAttack > timeBetweenAttacks)
             {
                 TriggerAttack();
+                audioSource.Play();
                 timeSinceLastAttack = 0;
             }
 

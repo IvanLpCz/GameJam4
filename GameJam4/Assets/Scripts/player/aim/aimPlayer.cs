@@ -27,6 +27,7 @@ namespace player
         private GameObject bulletShotGun0, bulletShotGun1, bulletShotGun2;
         private GameObject[] bulletShotGun;
 
+
         private void Start()
         {
             cam = Camera.main;
@@ -41,11 +42,13 @@ namespace player
             if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > fireRate && handgun)
             {
                 shootHandGun();
+                playerPistola.GetComponent<AudioSource>().Play();
             }
             if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > fireRate && shotgun)
             {
                 shootShotGun();
-                if(ammoShotgun <= 0)
+                playerEscopeta.GetComponent<AudioSource>().Play();
+                if (ammoShotgun <= 0)
                 {
                     shotgun = false;
                     handgun = true;
@@ -54,7 +57,8 @@ namespace player
             if (Input.GetKey(KeyCode.Mouse0) && lastShoot > fireRate && ar)
             {
                 shootAR();
-                if(ammoAR <= 0)
+                playerAR.GetComponent<AudioSource>().Play();
+                if (ammoAR <= 0)
                 {
                     ar = false;
                     handgun = true;
@@ -84,7 +88,7 @@ namespace player
         }
         private void gunManagement()
         {
-            if (Input.GetKey(KeyCode.Alpha1) && canAr)
+            if (Input.GetKey(KeyCode.Alpha2) && canAr)
             {
                 ar = true;
                 shotgun = false;
@@ -99,7 +103,7 @@ namespace player
                 GetComponent<Animator>().SetBool("escopeta", false);
 
             }
-            if (Input.GetKey(KeyCode.Alpha2) && canShotgun)
+            if (Input.GetKey(KeyCode.Alpha3) && canShotgun)
             {
                 ar = false;
                 shotgun = true;
@@ -114,7 +118,7 @@ namespace player
                 GetComponent<Animator>().SetBool("escopeta", true);
 
             }
-            if (Input.GetKey(KeyCode.Alpha3))
+            if (Input.GetKey(KeyCode.Alpha1))
             {
                 ar = false;
                 shotgun = false;
