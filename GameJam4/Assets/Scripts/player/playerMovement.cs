@@ -29,6 +29,7 @@ namespace player
             {
                 StartCoroutine(Dash());
             }
+
         }
         private void FixedUpdate()
         {
@@ -38,11 +39,14 @@ namespace player
             }      
             if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
             {
+                //GetComponent<Animator>().SetBool("moving", true);
                 GetComponent<Animator>().SetBool("moving", true);
             }
             else
             {
+                //GetComponent<Animator>().SetBool("moving", false);
                 GetComponent<Animator>().SetBool("moving", false);
+                
             }
         }
         private void move()

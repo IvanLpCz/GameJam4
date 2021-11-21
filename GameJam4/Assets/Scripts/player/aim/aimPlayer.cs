@@ -17,6 +17,8 @@ namespace player
         private bool canShotgun, canAr;
         private float fireRate;
         public float ammoAR, ammoShotgun;
+        public GameObject playerPistola, playerEscopeta, playerAR;
+        public int gunActive;
 
         [SerializeField] public weaponScript[] WeaponScript;
         [SerializeField] private LayerMask groundMask;
@@ -29,6 +31,7 @@ namespace player
         {
             cam = Camera.main;
             handgun = true;
+            GetComponent<Animator>().SetBool("pistola", true);
         }
         private void Update()
         {
@@ -86,6 +89,14 @@ namespace player
                 ar = true;
                 shotgun = false;
                 handgun = false;
+                playerAR.SetActive(true);
+                playerPistola.SetActive(false);
+                playerEscopeta.SetActive(false);
+
+                GetComponent<Animator>().SetBool("ar", true);
+                GetComponent<Animator>().SetBool("pistola", false);
+                GetComponent<Animator>().SetBool("2pistola", false);
+                GetComponent<Animator>().SetBool("escopeta", false);
 
             }
             if (Input.GetKey(KeyCode.Alpha2) && canShotgun)
@@ -93,6 +104,14 @@ namespace player
                 ar = false;
                 shotgun = true;
                 handgun = false;
+                playerAR.SetActive(false);
+                playerPistola.SetActive(false);
+                playerEscopeta.SetActive(true);
+
+                GetComponent<Animator>().SetBool("ar", false);
+                GetComponent<Animator>().SetBool("pistola", false);
+                GetComponent<Animator>().SetBool("2pistola", false);
+                GetComponent<Animator>().SetBool("escopeta", true);
 
             }
             if (Input.GetKey(KeyCode.Alpha3))
@@ -100,6 +119,14 @@ namespace player
                 ar = false;
                 shotgun = false;
                 handgun = true;
+                playerAR.SetActive(false);
+                playerPistola.SetActive(true);
+                playerEscopeta.SetActive(false);
+
+                GetComponent<Animator>().SetBool("ar", false);
+                GetComponent<Animator>().SetBool("pistola", true);
+                GetComponent<Animator>().SetBool("2pistola", false);
+                GetComponent<Animator>().SetBool("escopeta", false);
             }
             if (handgun)
             {
