@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 538855175061339577}
   - component: {fileID: 538855175061339576}
   - component: {fileID: 5589164318227908094}
+  - component: {fileID: 9150874375092285519}
   m_Layer: 11
   m_Name: JEfe
   m_TagString: getHit
@@ -172,6 +173,10 @@ MonoBehaviour:
   healthPoints: 100
   Bullet: {fileID: 0}
   BulletE: {fileID: 0}
+  AR: {fileID: 0}
+  shotgun: {fileID: 0}
+  shotgunR: {fileID: 0}
+  shotgunL: {fileID: 0}
   healthBar: {fileID: 0}
   isDead: 0
   isPlayer: 0
@@ -323,6 +328,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9150874375092285519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538855175061339583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8290ad6896b0e4bbb2ba5bcb9a9f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winCanvas: {fileID: 7814191714143860202, guid: d5897ad0337d22544abaf9cc8f943a2e, type: 3}
+  hp: {fileID: 538855175061339579}
 --- !u!1 &538855175219978491
 GameObject:
   m_ObjectHideFlags: 0
