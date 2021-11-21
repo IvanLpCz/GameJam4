@@ -3756,8 +3756,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 150
+  near clip plane: 77
+  far clip plane: 157.81
   field of view: 60
   orthographic: 1
   orthographic size: 22.91
@@ -4451,8 +4451,6 @@ MonoBehaviour:
   - {fileID: 3220346736397415825, guid: 55cec621827845b4b9d4602d5ed262e0, type: 3}
   - {fileID: 3473417035170823300, guid: 1f001fca1ac0bbc4a8f372e4f3071e47, type: 3}
   - {fileID: 3220346736397415825, guid: 55cec621827845b4b9d4602d5ed262e0, type: 3}
-  - {fileID: 3785227334335878973, guid: a8217c87c06537545bbb1f7cbbce68dc, type: 3}
-  - {fileID: 3785227334335878973, guid: a8217c87c06537545bbb1f7cbbce68dc, type: 3}
   rightRooms:
   - {fileID: 3220346736397415825, guid: 55cec621827845b4b9d4602d5ed262e0, type: 3}
   - {fileID: 4362294418791906075, guid: 2dd50b2a8ee8abd49943c11a37e08879, type: 3}
