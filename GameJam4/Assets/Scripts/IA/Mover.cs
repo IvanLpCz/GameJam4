@@ -50,7 +50,8 @@ namespace Movement
             Vector3 velocity = navMeshAnget.velocity;
             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
             float speed = localVelocity.z;
-            GetComponent<Animator>().SetFloat("forwardSpeed", speed);
+            GetComponent<Animator>().SetBool("followPlayer", true);
+            //GetComponent<Animator>().SetFloat("forwardSpeed", speed);
         }
 
     }

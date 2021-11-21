@@ -36,12 +36,21 @@ namespace player
             {
                 move();
             }      
+            if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
+            {
+                GetComponent<Animator>().SetBool("moving", true);
+            }
+            else
+            {
+                GetComponent<Animator>().SetBool("moving", false);
+            }
         }
         private void move()
         {           
             Vector3 rightMovement = right * MovespeedScripteable.speed * Input.GetAxis("Horizontal");
             Vector3 upMovement = forward * MovespeedScripteable.speed * Input.GetAxis("Vertical");
-            
+
+
             Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
             rb.velocity = new Vector3(heading.x, rb.velocity.y, heading.z); 

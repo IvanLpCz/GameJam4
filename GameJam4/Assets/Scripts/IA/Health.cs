@@ -13,7 +13,7 @@ namespace Core
        [SerializeField] bulletE BulletE;
         public HealthBar healthBar;
         private float damageTaken, maxHealth;
-        bool isDead = false;
+        public bool isDead = false;
         public bool isPlayer = false;
         private void Start()
         {
