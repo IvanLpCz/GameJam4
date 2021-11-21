@@ -9,7 +9,12 @@ namespace Game_Core
         public Renderer roomRend;
         public GameObject lengueta;
         public bool isLeaving;
-
+        private GameObject miniMapCam;
+        public GameObject minimapPos;
+        private void Start()
+        {
+            miniMapCam = GameObject.Find("minimapCamera");
+        }
         private void OnTriggerEnter(Collider other)
         {
             if (isLeaving)
@@ -21,6 +26,7 @@ namespace Game_Core
             {
                 roomRend.enabled = true;
                 lengueta.SetActive(true);
+                miniMapCam.transform.position = minimapPos.transform.position;
 
             }
         }

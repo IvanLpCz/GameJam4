@@ -16,7 +16,7 @@ namespace player
         public bool handgun, shotgun, ar;
         private bool canShotgun, canAr;
         private float fireRate;
-        private float ammoAR, ammoShotgun;
+        public float ammoAR, ammoShotgun;
 
         [SerializeField] public weaponScript[] WeaponScript;
         [SerializeField] private LayerMask groundMask;
