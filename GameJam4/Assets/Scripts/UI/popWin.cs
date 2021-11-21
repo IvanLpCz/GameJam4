@@ -9,14 +9,14 @@ namespace enemy
     {
         public GameObject winCanvas;
         public Health hp;
-
-
+        private bool winPop;
 
         private void Update()
         {
-            if (hp.isDead)
+            if (hp.isDead && !winPop)
             {
-                winCanvas.SetActive(true);
+                Instantiate(winCanvas);
+                winPop = true;
             }
         }
     }

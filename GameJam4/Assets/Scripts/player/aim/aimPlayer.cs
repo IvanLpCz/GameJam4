@@ -71,6 +71,17 @@ namespace player
                 }
             }              
             lastShoot = Time.deltaTime + lastShoot;
+            if(ammoAR <= 0)
+            {
+                playerAR.SetActive(false);
+                playerPistola.SetActive(true);
+            }
+            if(ammoShotgun <= 0)
+            {
+                playerEscopeta.SetActive(false);
+                playerPistola.SetActive(true);
+            }
+
         }
 
         void ammoManagement()
