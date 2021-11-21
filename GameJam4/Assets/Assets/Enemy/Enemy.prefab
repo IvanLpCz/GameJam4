@@ -487,19 +487,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: {fileID: 3197711977428475824}
   Loot:
+  - {fileID: 8707830358432339883, guid: 90e17d7e6c7d12f4a91df624ccfaaee9, type: 3}
   - {fileID: 4863572937184863489, guid: 9608c03e3c1f22147bef1cc693874aab, type: 3}
+  - {fileID: 9099320364513342659, guid: 98a9aaf798968b543939fa6fc4beb1d5, type: 3}
   - {fileID: 2893276840301588678, guid: 3acad116af6b39d46a8ba77ec1fecd89, type: 3}
-  - {fileID: 1692255696601716823, guid: bd6111929d507cf43b8b8c144e2b8492, type: 3}
+  - {fileID: 8707830358432339883, guid: 90e17d7e6c7d12f4a91df624ccfaaee9, type: 3}
   - {fileID: 1284531579211578072, guid: 95c0c2793dbdab7458624225b16aff31, type: 3}
   - {fileID: 5126275815799628768, guid: f4bc5d7ab0618f24c9bf8a4f53c89ea9, type: 3}
+  - {fileID: 9099320364513342659, guid: 98a9aaf798968b543939fa6fc4beb1d5, type: 3}
   - {fileID: 8229717973351759447, guid: 2bd99021ca82561468776d6f6c12cf36, type: 3}
   - {fileID: 6650802966814362668, guid: 67bce41cf5513a047a8ae55c10324d29, type: 3}
-  - {fileID: 9099320364513342659, guid: 98a9aaf798968b543939fa6fc4beb1d5, type: 3}
-  - {fileID: 9099320364513342659, guid: 98a9aaf798968b543939fa6fc4beb1d5, type: 3}
+  - {fileID: 1692255696601716823, guid: bd6111929d507cf43b8b8c144e2b8492, type: 3}
   - {fileID: 9099320364513342659, guid: 98a9aaf798968b543939fa6fc4beb1d5, type: 3}
   - {fileID: 8707830358432339883, guid: 90e17d7e6c7d12f4a91df624ccfaaee9, type: 3}
-  - {fileID: 8707830358432339883, guid: 90e17d7e6c7d12f4a91df624ccfaaee9, type: 3}
-  - {fileID: 8707830358432339883, guid: 90e17d7e6c7d12f4a91df624ccfaaee9, type: 3}
+  - {fileID: 1692255696601716823, guid: bd6111929d507cf43b8b8c144e2b8492, type: 3}
 --- !u!82 &7708984550214627602
 AudioSource:
   m_ObjectHideFlags: 0
