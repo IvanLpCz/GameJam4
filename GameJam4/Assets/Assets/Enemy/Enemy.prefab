@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 3197711977428475819}
   - component: {fileID: 3197711977428475837}
   - component: {fileID: -622314824396613883}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: getHit
   m_Icon: {fileID: 0}
@@ -267,6 +267,7 @@ MonoBehaviour:
   Bullet: {fileID: 0}
   BulletE: {fileID: 0}
   healthBar: {fileID: 0}
+  isDead: 0
   isPlayer: 0
 --- !u!114 &3197711977428475825
 MonoBehaviour:

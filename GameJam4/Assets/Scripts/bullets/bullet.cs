@@ -11,6 +11,7 @@ namespace bullets
         Rigidbody rb;
         [SerializeField] basicBullet BasicBullet;
         public float bulletDamage;
+        public GameObject particle;
         private void Awake()
         {
             rb = GetComponent<Rigidbody>();
@@ -28,6 +29,7 @@ namespace bullets
             {
                 print("hula, te he dado");
             }
+            Instantiate(particle, transform.position, transform.rotation);
             gameObject.SetActive(false);
         }
     }

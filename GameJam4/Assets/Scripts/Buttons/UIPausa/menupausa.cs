@@ -8,7 +8,7 @@ namespace menuLogic
 {
     public class menupausa : MonoBehaviour
     {
-        public Button contune, restart, exit;
+        public Button contune, exit;
         public GameObject inGameHUD, pauseMenu;
 
         public void ContinueButton()

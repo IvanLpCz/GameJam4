@@ -232,10 +232,12 @@ namespace player
             if (other.gameObject.CompareTag("ammoAR"))
             {
                 ammoAR = ammoAR + 60;
+                Destroy(other.gameObject);
             }
             if (other.gameObject.CompareTag("ammoShotgun"))
             {
                 ammoShotgun = ammoShotgun + 12;
+                Destroy(other.gameObject);
             }
         }
 

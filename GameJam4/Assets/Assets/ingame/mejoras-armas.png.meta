@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 1ab0daa744f82a34b90331df13366671
+guid: a67e4ebe123630a4fa1dea4876daa6d1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6059332692848953022
-    second: mejorasarregladas-balas_0
+      213: 5656660781101169100
+    second: mejoras-armas_0
   - first:
-      213: 8593125520648640329
-    second: mejorasarregladas-balas_1
+      213: 2089417116842427355
+    second: mejoras-armas_1
   - first:
-      213: -2371717816770443111
-    second: mejorasarregladas-balas_2
+      213: -74561286024590867
+    second: mejoras-armas_2
   - first:
-      213: -596099174823890347
-    second: mejorasarregladas-balas_3
-  - first:
-      213: -8249720333137467056
-    second: mejorasarregladas-balas_4
+      213: 8879071350694023553
+    second: mejoras-armas_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -154,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mejorasarregladas-balas_0
+      name: mejoras-armas_0
       rect:
         serializedVersion: 2
-        x: 108
-        y: 2302
-        width: 1192
-        height: 1031
+        x: 0
+        y: 2210
+        width: 1561
+        height: 944
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 249b3d2050de8eba0800000000000000
-      internalID: -6059332692848953022
+      spriteID: cc93b68920f708e40800000000000000
+      internalID: 5656660781101169100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mejorasarregladas-balas_1
+      name: mejoras-armas_1
       rect:
         serializedVersion: 2
-        x: 1512
-        y: 2290
-        width: 1193
-        height: 1031
+        x: 1703
+        y: 2210
+        width: 1555
+        height: 944
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9471b98f12ae04770800000000000000
-      internalID: 8593125520648640329
+      spriteID: bd3830d2cc91ffc10800000000000000
+      internalID: 2089417116842427355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mejorasarregladas-balas_2
+      name: mejoras-armas_2
       rect:
         serializedVersion: 2
-        x: 2936
-        y: 1103
-        width: 312
-        height: 1213
+        x: 3648
+        y: 2147
+        width: 924
+        height: 1246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 998cee72637f51fd0800000000000000
-      internalID: -2371717816770443111
+      spriteID: de90288c7ea17fef0800000000000000
+      internalID: -74561286024590867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mejorasarregladas-balas_3
+      name: mejoras-armas_3
       rect:
         serializedVersion: 2
-        x: 4254
-        y: 856
-        width: 359
-        height: 2307
+        x: 4200
+        y: 2129
+        width: 24
+        height: 4
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,29 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 552f7b175fa3ab7f0800000000000000
-      internalID: -596099174823890347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mejorasarregladas-balas_4
-      rect:
-        serializedVersion: 2
-        x: 3576
-        y: 1399
-        width: 280
-        height: 717
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 059260fd01b138d80800000000000000
-      internalID: -8249720333137467056
+      spriteID: 1811771a95cc83b70800000000000000
+      internalID: 8879071350694023553
       vertices: []
       indices: 
       edges: []
@@ -261,7 +237,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3b2432e1cf8b46448be55b64817d760e
+    spriteID: e8c3180f7bb5d8847871d9f6228ae48e
     internalID: 0
     vertices: []
     indices: 

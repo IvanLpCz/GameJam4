@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 538855175061339578}
   - component: {fileID: 538855175061339577}
   - component: {fileID: 538855175061339576}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: JEfe
   m_TagString: getHit
   m_Icon: {fileID: 0}
@@ -171,6 +171,7 @@ MonoBehaviour:
   Bullet: {fileID: 0}
   BulletE: {fileID: 0}
   healthBar: {fileID: 0}
+  isDead: 0
   isPlayer: 0
 --- !u!114 &538855175061339578
 MonoBehaviour:
