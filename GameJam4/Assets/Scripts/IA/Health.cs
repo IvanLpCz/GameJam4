@@ -16,19 +16,20 @@ namespace Core
         public bool isDead = false;
         public bool isPlayer = false;
         public GameObject deathCanvas, hudCanvas;
+        public GameObject deathSound;
         private void Start()
         {
             maxHealth = healthPoints;
             Bullet = GameObject.Find("bala").GetComponent<bullet>();
             BulletE = GameObject.Find("balaE").GetComponent<bulletE>();
             healthBar.SetMaxHealth(maxHealth);
-        }
-        private void Update()
-        {
             if (!isPlayer)
             {
                 healthBar = null;
             }
+        }
+        private void Update()
+        {
             if (isPlayer)
             {
                 healthBar.SetHealth(healthPoints);
@@ -53,6 +54,7 @@ namespace Core
             isDead = true;
             GetComponent<Animator>().SetTrigger("Die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
+            deathSound.GetComponent<AudioSource>().Play();
             if (isPlayer)
             {
                 deathCanvas.SetActive(true);
