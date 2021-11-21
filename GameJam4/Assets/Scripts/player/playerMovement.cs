@@ -17,6 +17,9 @@ namespace player
         public float bounce = 2f;
         public GameObject guns;
         public float bonusMovement;
+
+        public GameObject dashParticles;
+
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
@@ -76,12 +79,15 @@ namespace player
         }
         IEnumerator Dash()
         {
+            dashParticles.SetActive(true);
             rb.AddForce(transform.forward * dashScripteable.dashSpeed, ForceMode.Impulse);
+            
             canDash = false;
 
             yield return new WaitForSeconds(dashScripteable.dashDuration);
 
             rb.velocity = Vector3.zero;
+            dashParticles.SetActive(false);
             canDash = true;
         }
         private void OnCollisionEnter(Collision collision)
