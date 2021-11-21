@@ -6,14 +6,15 @@ namespace enemy
 {
     public class getEnemy : MonoBehaviour
     {
-        private bool haspassed, lastRoom;
+        private bool haspassed;
+        public bool lastRoom;
         public Transform spwan;
         private int randomAmountOfEnemys;
         public GameObject Enemy, Boss;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!haspassed)
+            if (!haspassed && !lastRoom)
             {
                 randomAmountOfEnemys = Random.Range(1,3);
                 for(int i = 0; i <= randomAmountOfEnemys; i++)
@@ -22,6 +23,12 @@ namespace enemy
                 }
                 haspassed = true;
             }
+            if (!haspassed && lastRoom)
+            {
+                Instantiate(Boss, spwan);
+                haspassed = true;
+            }
+
         }
     }
 }

@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 538855175061339576}
   - component: {fileID: 5589164318227908094}
   - component: {fileID: 9150874375092285519}
-  - component: {fileID: 228060497}
   m_Layer: 11
   m_Name: JEfe
   m_TagString: getHit
@@ -38,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 538855175061339583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.41, y: 1.24, z: -1.95}
-  m_LocalScale: {x: 0.7, y: 1.77, z: 0.7}
+  m_LocalScale: {x: 2, y: 5, z: 2}
   m_Children:
   - {fileID: 538855175219978484}
   - {fileID: 2813014649807474469}
@@ -173,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d79db28e5d7f0f4b980ac045e8240cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 100
+  healthPoints: 300
   Bullet: {fileID: 0}
   BulletE: {fileID: 0}
   AR: {fileID: 0}
@@ -346,23 +345,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCanvas: {fileID: 7814191714143860202, guid: d5897ad0337d22544abaf9cc8f943a2e, type: 3}
   hp: {fileID: 538855175061339579}
---- !u!114 &228060497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538855175061339583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 705aab221764c6240b41a8ec7d3066bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: {fileID: 538855175061339579}
-  Loot:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &538855175219978491
 GameObject:
   m_ObjectHideFlags: 0
