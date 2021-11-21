@@ -173,6 +173,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   isDead: 0
   isPlayer: 0
+  deathCanvas: {fileID: 0}
+  hudCanvas: {fileID: 0}
 --- !u!114 &538855175061339578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0bbabfcc36be429a3fcc2a9fdba07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseDistance: 200
+  chaseDistance: 100
   supicionTime: 1.25
   waypointDwellTime: 1.5
   patrolSpeedFraction: 0.2

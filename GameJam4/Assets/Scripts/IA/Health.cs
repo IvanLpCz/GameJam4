@@ -15,6 +15,7 @@ namespace Core
         private float damageTaken, maxHealth;
         public bool isDead = false;
         public bool isPlayer = false;
+        public GameObject deathCanvas, hudCanvas;
         private void Start()
         {
             maxHealth = healthPoints;
@@ -48,6 +49,18 @@ namespace Core
             isDead = true;
             GetComponent<Animator>().SetTrigger("Die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
+            if (isPlayer)
+            {
+                deathCanvas.SetActive(true);
+                hudCanvas.SetActive(false);
+                Time.timeScale = 0;
+            }
+            if (!isPlayer)
+            {
+                deathCanvas = null;
+                hudCanvas = null;
+                healthBar = null;
+            }
         }
         private void OnTriggerEnter(Collider collision)
         {

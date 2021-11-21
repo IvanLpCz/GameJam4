@@ -20,7 +20,7 @@ namespace enemy
 
             if (hp.isDead && !alreadyDrop)
             {
-                GameObject GivenLoot = Instantiate(Loot[rand], transform.position, transform.rotation);
+                GameObject GivenLoot = Instantiate(Loot[rand], transform.position, Loot[rand].transform.rotation);
                 alreadyDrop = true;
             }
 

@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8537110c8e7fa47bee6aea924f6929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIperk: {fileID: 0}
+  UIperk: {fileID: 3609122470335464158, guid: fe3679dc860981d4188045584bd277db, type: 3}
 --- !u!1 &8069090140596235159
 GameObject:
   m_ObjectHideFlags: 0

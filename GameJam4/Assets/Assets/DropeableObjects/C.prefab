@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1055304700356067162}
   - component: {fileID: 4741320835071355889}
   - component: {fileID: 7747446010937751580}
+  - component: {fileID: 6523345435166160591}
   m_Layer: 0
   m_Name: C
   m_TagString: PerkC
@@ -96,6 +97,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6523345435166160591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2893276840301588678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8537110c8e7fa47bee6aea924f6929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIperk: {fileID: 930333994885252984, guid: 724ca76f316cda24f8cba4439339dd38, type: 3}
 --- !u!1 &4894971999209262390
 GameObject:
   m_ObjectHideFlags: 0
