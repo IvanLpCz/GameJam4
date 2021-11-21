@@ -25,6 +25,10 @@ namespace Core
         }
         private void Update()
         {
+            if (!isPlayer)
+            {
+                healthBar = null;
+            }
             if (isPlayer)
             {
                 healthBar.SetHealth(healthPoints);
@@ -59,7 +63,6 @@ namespace Core
             {
                 deathCanvas = null;
                 hudCanvas = null;
-                healthBar = null;
             }
         }
         private void OnTriggerEnter(Collider collision)
