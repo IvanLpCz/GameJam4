@@ -23,6 +23,7 @@ TagManager:
   - PerkH
   - PerkL
   - PerkS
+  - healing
   layers:
   - Default
   - TransparentFX

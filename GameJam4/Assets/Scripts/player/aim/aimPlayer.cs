@@ -27,43 +27,49 @@ namespace player
         private GameObject bulletShotGun0, bulletShotGun1, bulletShotGun2;
         private GameObject[] bulletShotGun;
 
+        private float firerateUpgrade;
+        private float firerateUpgradeShotGun;
 
         private void Start()
         {
             cam = Camera.main;
             handgun = true;
             GetComponent<Animator>().SetBool("pistola", true);
+            firerateUpgrade = 0;
+            firerateUpgradeShotGun = 0;
         }
         private void Update()
         {
             Aim();
             ammoManagement();
             gunManagement();
-            if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > fireRate && handgun)
-            {
-                shootHandGun();
-                playerPistola.GetComponent<AudioSource>().Play();
-            }
-            if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > fireRate && shotgun)
-            {
-                shootShotGun();
-                playerEscopeta.GetComponent<AudioSource>().Play();
-                if (ammoShotgun <= 0)
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W)) {
+                if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > fireRate && handgun)
                 {
-                    shotgun = false;
-                    handgun = true;
+                    shootHandGun();
+                    playerPistola.GetComponent<AudioSource>().Play();
                 }
-            }
-            if (Input.GetKey(KeyCode.Mouse0) && lastShoot > fireRate && ar)
-            {
-                shootAR();
-                playerAR.GetComponent<AudioSource>().Play();
-                if (ammoAR <= 0)
+                if (Input.GetKeyDown(KeyCode.Mouse0) && lastShoot > fireRate && shotgun)
                 {
-                    ar = false;
-                    handgun = true;
+                    shootShotGun();
+                    playerEscopeta.GetComponent<AudioSource>().Play();
+                    if (ammoShotgun <= 0)
+                    {
+                        shotgun = false;
+                        handgun = true;
+                    }
                 }
-            }
+                if (Input.GetKey(KeyCode.Mouse0) && lastShoot > fireRate && ar)
+                {
+                    shootAR();
+                    playerAR.GetComponent<AudioSource>().Play();
+                    if (ammoAR <= 0)
+                    {
+                        ar = false;
+                        handgun = true;
+                    }
+                }
+            }              
             lastShoot = Time.deltaTime + lastShoot;
         }
 
@@ -134,13 +140,13 @@ namespace player
             }
             if (handgun)
             {
-                fireRate = WeaponScript[0].fireRate;
+                fireRate = WeaponScript[0].fireRate - firerateUpgrade;
                 print("pistola activa " + "su cadencia es de " + fireRate);
                 bulletHandgun = objectPooling.SharedInstance.GetPooledObject("bala");
             }
             if (shotgun)
             {
-                fireRate = WeaponScript[1].fireRate;
+                fireRate = WeaponScript[1].fireRate - firerateUpgradeShotGun;
                 print("escopeta activa " + "su cadencia es de " + fireRate + "su munición restante es de: " + ammoShotgun);
                 bulletShotGun0 = objectPooling.SharedInstance.GetPooledObject("balaEscopeta");
                 bulletShotGun1 = objectPooling.SharedInstance.GetPooledObject("balaEscopetaR");
@@ -148,7 +154,7 @@ namespace player
             }
             if (ar)
             {
-                fireRate = WeaponScript[2].fireRate;
+                fireRate = WeaponScript[2].fireRate - firerateUpgrade;
                 print("rifle de asalto activo " + "su cadencia es de " + fireRate + "su munición restante es de: " + ammoAR);
                 bulletAR = objectPooling.SharedInstance.GetPooledObject("balaAR");
             }
@@ -235,13 +241,18 @@ namespace player
         {
             if (other.gameObject.CompareTag("ammoAR"))
             {
-                ammoAR = ammoAR + 60;
+                ammoAR = ammoAR + 30;
                 Destroy(other.gameObject);
             }
             if (other.gameObject.CompareTag("ammoShotgun"))
             {
                 ammoShotgun = ammoShotgun + 12;
                 Destroy(other.gameObject);
+            }
+            if (other.gameObject.CompareTag("PerkC"))
+            {
+                firerateUpgrade = 0.1f;
+                firerateUpgradeShotGun = 0.4f;
             }
         }
 

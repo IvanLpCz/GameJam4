@@ -22,6 +22,10 @@ namespace Core
         public bool isPlayer = false;
         public GameObject deathCanvas, hudCanvas;
         public GameObject deathSound;
+        public float dmgBunus;
+        private float healing = 10f;
+        private float moreHP;
+
         private void Start()
         {
             maxHealth = healthPoints;
@@ -31,6 +35,8 @@ namespace Core
             shotgun = GameObject.Find("balaEscopeta").GetComponent<bullet>();
             shotgunR = GameObject.Find("balaEscopetaR").GetComponent<bullet>();
             shotgunL = GameObject.Find("balaEscopetaL").GetComponent<bullet>();
+
+            dmgBunus = 0;
 
                 healthBar.SetMaxHealth(maxHealth);
         }
@@ -77,7 +83,7 @@ namespace Core
         {
             if (collision.gameObject.CompareTag("bala"))
             {
-                damageTaken = Bullet.bulletDamage;
+                damageTaken = Bullet.bulletDamage + dmgBunus;
                 print("playerdmg" + damageTaken);
                 TakeDamage();
             }
@@ -89,27 +95,43 @@ namespace Core
             }
             if (collision.gameObject.CompareTag("balaAR"))
             {
-                damageTaken = AR.bulletDamage;
+                damageTaken = AR.bulletDamage + dmgBunus;
                 print("bossdmg" + damageTaken);
                 TakeDamage();
             }
             if (collision.gameObject.CompareTag("balaEscopeta"))
             {
-                damageTaken = shotgun.bulletDamage;
+                damageTaken = shotgun.bulletDamage + dmgBunus;
                 print("bossdmg" + damageTaken);
                 TakeDamage();
             }
             if (collision.gameObject.CompareTag("balaEscopetaR"))
             {
-                damageTaken = shotgunR.bulletDamage;
+                damageTaken = shotgunR.bulletDamage + dmgBunus;
                 print("bossdmg" + damageTaken);
                 TakeDamage();
             }
             if (collision.gameObject.CompareTag("balaEscopetaL"))
             {
-                damageTaken = shotgunL.bulletDamage;
+                damageTaken = shotgunL.bulletDamage + dmgBunus;
                 print("bossdmg" + damageTaken);
                 TakeDamage();
+            }
+            if (collision.gameObject.CompareTag("PerkH"))
+            {
+                dmgBunus = 10f;
+            }
+            if (collision.gameObject.CompareTag("healing"))
+            {
+                if(healthPoints < maxHealth)
+                {
+                    healthPoints = healthPoints + healing;
+                    Destroy(collision.gameObject);
+                }
+            }
+            if (collision.gameObject.CompareTag("PerkL"))
+            {
+                maxHealth = maxHealth + moreHP;
             }
 
         }

@@ -129,6 +129,7 @@ MonoBehaviour:
   BasicBullet: {fileID: 11400000, guid: 85bd9559c3df916458e4319f4ecf88fe, type: 2}
   bulletDamage: 0
   particle: {fileID: 1631847508838014910, guid: 03216bbfdc74309489509c288c8a0f30, type: 3}
+  activeBonus: {fileID: 0}
 --- !u!1 &7847799446196903926
 GameObject:
   m_ObjectHideFlags: 0

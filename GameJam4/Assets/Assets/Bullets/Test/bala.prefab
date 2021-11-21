@@ -211,3 +211,4 @@ MonoBehaviour:
   BasicBullet: {fileID: 11400000, guid: 85bd9559c3df916458e4319f4ecf88fe, type: 2}
   bulletDamage: 0
   particle: {fileID: 3062436254861370665, guid: 6a513fdebc3ae1c4680eb385de305c68, type: 3}
+  activeBonus: {fileID: 0}

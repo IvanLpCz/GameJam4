@@ -15,6 +15,8 @@ namespace player
         public bool canDash = false;
         private bool isWall;
         public float bounce = 2f;
+        public GameObject guns;
+        public float bonusMovement;
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
@@ -22,6 +24,8 @@ namespace player
             forward.y = 0;
             forward = Vector3.Normalize(forward);
             right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+
+            bonusMovement = 0;
         }
         private void Update()
         {
@@ -40,19 +44,26 @@ namespace player
             if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
             {
                 //GetComponent<Animator>().SetBool("moving", true);
+                guns.SetActive(true);
                 GetComponent<Animator>().SetBool("moving", true);
             }
             else
             {
                 //GetComponent<Animator>().SetBool("moving", false);
+                StartCoroutine(showGuns());
                 GetComponent<Animator>().SetBool("moving", false);
                 
             }
         }
+        IEnumerator showGuns()
+        {
+            yield return new WaitForSeconds(0.2f);
+            guns.SetActive(false);
+        }
         private void move()
         {           
-            Vector3 rightMovement = right * MovespeedScripteable.speed * Input.GetAxis("Horizontal");
-            Vector3 upMovement = forward * MovespeedScripteable.speed * Input.GetAxis("Vertical");
+            Vector3 rightMovement = right * (MovespeedScripteable.speed + bonusMovement) * Input.GetAxis("Horizontal");
+            Vector3 upMovement = forward * (MovespeedScripteable.speed + bonusMovement) * Input.GetAxis("Vertical");
 
 
             Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
@@ -90,6 +101,10 @@ namespace player
             if (other.gameObject.CompareTag("PerkD"))
             {
                 canDash = true;
+            }
+            if (other.gameObject.CompareTag("PerkS"))
+            {
+                bonusMovement = 0.2f;
             }
         }
     }
